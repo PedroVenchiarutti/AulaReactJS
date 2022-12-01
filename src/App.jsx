@@ -25,7 +25,7 @@ const App = () => {
   };
 
   // Esse pega os repositorios
-  useEffect(() => { 
+  useEffect(() => {
     axios
       .get(user.repos_url)
       .then((response) => {
@@ -37,12 +37,12 @@ const App = () => {
   }, [user && user.repos_url]);
 
   return (
-    <div>
+    <div className="bg-amber-500">
       <h1>{user.login}</h1>
       <h2>{user.bio}</h2>
       <Carrosel repos={repos} />
 
-      <span>Digite seu nome do GITHUB</span>
+      <span className="">Digite seu nome do GITHUB</span>
       <input
         type="text"
         value={name}
